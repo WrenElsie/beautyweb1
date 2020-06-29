@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .back{
+            position: absolute;
+            top:30px;
+            left:100px;
+            width:1200px;
+            height:700px;
+            background-repeat: no-repeat;
+            background: url("../../../media/背景.jpeg");
+            background-size: 1200px 700px;
+
+        }
+    .inner_box {
+        position: absolute;
+        background-color: seashell;
+        top:200px;
+        left:80px;
+    }
+    </style>
+
+</head>
+<body>
+    {% block content %}
+    <div class="back">
+    <div class="inner_box">
+        <h2>登录</h2>
+    {% if message %}
+    {{ message }}
+    {% endif %}
+    <div class="form-wrapper">
+        <form method="post" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="fieldWrapper">
+            {{ field.errors }}
+            {{ field.label_tag }} {{ field }}
+            {% if field.help_text %}
+                <p class="help">{{ field.help_text|safe }}</p>
+            {% endif %}
+            </div>
+        {% endfor %}
+        <div class="button-wrapper submit">
+            <input type="submit" value="登录" />
+        </div>
+        </form>
+        <a href="/accounts/register">注册</a>
+
+    </div>
+    {% endblock %}
+</div>
+    </div>
+</body>
+</html>

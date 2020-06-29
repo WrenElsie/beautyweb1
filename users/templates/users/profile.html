@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+    <style type="text/css">
+        #border{
+            border: 1px solid seashell;
+            padding: 15px;
+            width-left-: 100px;
+            border-right-width:400px;
+            border-left-width: 400px;
+            text-align: center;
+        }
+        #center{
+           text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h2 id="center" >个人信息</h2>
+<ul align="center">
+    <p id="border">名: {{ user.first_name }} </p>
+    <p id="border">姓: {{ user.last_name }} </p>
+    <p id="border">单位名称: {{ user.profile.org }} </p>
+    <p id="border">电话号码: {{ user.profile.telephone }} </p>
+<p id="border">
+    <a href="{% url 'users:profile_update' user.id %}">编辑</a>
+    | <a href="{% url 'users:pwd_change' user.id %}">修改密码</a>
+    | <a href="{% url 'users:logout' %}">退出</a>
+    | <a href="{% url 'sephoraweb:beauty_list' %}">回到首页</a>
+</p>
+</ul>
+</body>
+</html>
+

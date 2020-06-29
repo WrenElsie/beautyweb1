@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .block {
+            width: 800px;
+            height: 500px;
+            border: 1px solid black;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .box_big {
+            position: absolute;
+            width: 4200px;
+            height: 400px;
+
+        }
+
+        .nav {
+            transition: margin-left 0.5s linear;
+        }
+
+        .box {
+            width: 800px;
+            height: 600px;
+            float: left;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .spot {
+            position: absolute;
+            width: 100%;
+            text-align: right;
+            bottom: 5px;
+        }
+
+        .spot_list {
+
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            text-align: center;
+            border: 1px solid gray;
+            border-radius: 5px;
+            line-height: 30px;
+            font-weight: bolder;
+            margin: 10px;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .btn {
+            width: 100%;
+            height: 80px;
+            position: absolute;
+            margin: 0 auto;
+            top: 160px;
+        }
+
+        .left_btn, .right_btn {
+            width: 30px;
+            height: 80px;
+            z-index: 15;
+            background: rgba(255, 255, 255, 0.3);
+            text-align: center;
+            line-height: 80px;
+            border-radius: 8px;
+
+        }
+
+        .left_btn {
+            float: left;
+        }
+
+        .right_btn {
+            float: right;
+        }
+
+        .word{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    {% extends "sephoraweb/base.html" %}
+    {% block content %}
+        <table border="1" width="1200" cellpadding="0" cellspacing="0" bordercolor="white">
+        <tr height="70" align="center" valign="bottom">
+            <th><h2>全部商品类目</h2></th>
+        </tr>
+            <tr height="30" align="center" valign="middle">
+            <td></td>
+            <td rowspan="6">
+                <div class="block">
+                <div class="box_big ">
+                    <div class="box"><img src="../../../media/images/6.png" alt=""/></div>
+                    <div class="box"><img src="../../../media/images/2.png" alt=""/></div>
+                    <div class="box"><img src="../../../media/images/3.png" alt=""/></div>
+                    <div class="box"><img src="../../../media/images/4.png" alt=""/></div>
+                    <div class="box"><img src="../../../media/images/5.png" alt=""/></div>
+                </div>
+                <div class="spot">
+                    <div class="spot_list">1</div>
+                    <div class="spot_list">2</div>
+                    <div class="spot_list">3</div>
+                    <div class="spot_list">4</div>
+                    <div class="spot_list">5</div>
+                </div>
+                <div class="btn">
+                    <div class="left_btn"><span> < </span></div>
+                    <div class="right_btn"><span> > </span></div>
+                </div>
+                </div></td>
+            </tr>
+        <tr height="70" align="center" valign="middle">
+            <td><h3><a href="/sephoraweb/beauty/1/">护肤</a></h3></td>
+        </tr>
+        <tr height="70" align="center" valign="middle">
+            <td><h3><a href="/sephoraweb/beauty/2/">彩妆</a></h3></td>
+        </tr>
+        <tr height="70" align="center" valign="middle">
+            <td><h3><a href="/sephoraweb/beauty/3/">香水</a></h3></td>
+        </tr>
+        <tr height="70" align="center" valign="middle">
+            <td><h3><a href="/sephoraweb/beauty/4/">工具</a></h3></td>
+        </tr>
+        <tr height="50" align="center" valign="middle"></tr>
+
+        </table>
+
+
+<script>
+//首先获取元素，这里获取了所有需要的元素。
+    var box = document.getElementsByClassName("box_big")[0];
+    var spot = document.getElementsByClassName("spot_list");
+    var block = document.getElementsByClassName("block")[0];
+    var left_btn = document.getElementsByClassName("left_btn")[0];
+    var right_btn = document.getElementsByClassName("right_btn")[0];
+    var time = null;
+    spot[0].style.background = "rgba(91,91,91,0.8)";
+    var count = 0;
+    showtime();
+    //鼠标进入计时器停止
+    block.onmouseenter = function () {
+        clearInterval(time);
+    };
+    //鼠标出来计时器打开
+    block.onmouseleave = function () {
+        showtime();
+    };
+    //点的事件
+    for (var i = 0; i < spot.length; i++) {
+        spot[i].index = i;
+        spot[i].onmouseenter = function () {
+            spot[count].style.background = "rgba(255, 255, 255, 0.3)";
+            this.style.background = "rgba(91,91,91,0.8)";
+            count = this.index;
+            box.style.marginLeft = (count * -800) + "px";
+        }
+
+    }
+    //图片左边划
+    left_btn.onclick = function () {
+        mate();
+    };
+    //图片右边划
+    right_btn.onclick = function () {
+        spot[count].style.backgroundColor = "rgba(255,255,255,0.3)";
+        count--;
+        if (count < 0) {
+            box.className = "box_big";
+            count = box.children.length - 2;
+            box.style.marginLeft = "-3500px";
+        }
+        setTimeout(function () {
+            box.className = "box_big nav";
+            box.style.marginLeft = (-800 * count) + "px";
+            spot[count].style.backgroundColor = "rgba(91,91,91,0.8)";
+        }, 1);
+    };
+    //计时器
+    function showtime() {
+        time = setInterval(function () {
+            mate();
+        }, 1500);
+    }
+    //正常滚动
+    function mate() {
+        box.className = "box_big nav";
+        spot[count].style.background = "rgba(255, 255, 255, 0.3)";
+        count++;
+        spot[count > box.children.length - 2 ? 0 : count].style.background = "rgba(91,91,91,0.8)";
+        box.style.marginLeft = (count * -800) + "px";
+        setTimeout(function () {
+            if (count > box.children.length - 2) {
+                count = 0;
+                box.className = "box_big";
+                box.style.marginLeft = "0px"
+            }
+        }, 1000)
+    }
+</script>
+        <div class="word">
+            <p>沪公网安备 31010602003121号  ICP备案序号:沪ICP备05026645号  食品经营许可证  网站使用条款  严正声明</p>
+            <p>本网站隶属于丝芙兰（上海）化妆品销售有限公司（企业法人营业执照）  预付卡信息对接唯一标识 : 310101F5201530100309</p>
+        </div>
+
+{% endblock %}
+</body>
+</html>

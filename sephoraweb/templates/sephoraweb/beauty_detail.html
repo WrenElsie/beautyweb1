@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .item{
+            text-align: center;
+        }
+        .img{
+            margin: 0 auto;
+        }
+         .word{
+            text-align: center;
+        }
+        .font1{
+            color: black;
+            font-style: oblique;
+            background-color: bisque;
+        }
+        .font2{
+            color: black;
+            text-decoration-line: underline;
+            text-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+
+        }
+    </style>
+</head>
+<body>
+    {% extends "sephoraweb/base.html" %}
+    {% block content %}
+    <div class="right-cont-wrap">
+    <div class="right-cont">
+    <tr class="cont-list layui-clear" id="list-cont">
+    <table border="1" width="1100" cellpadding="0" cellspacing="0" bordercolor="white">
+        <tr>
+            <div class="font1"><h2>护肤</h2></div>
+        <div class="font2"><h3 align="center">卸妆</h3></div>
+        <td>
+            <ul>
+        <div class="item">
+            <div class="img">
+                <a href="/sephoraweb/beauty/1/goods/1/">
+                    <img src="../../../media/sephoraweb/卸妆啫喱.jpg"alt="卸妆啫喱" title="卸妆啫喱" height="200" wide="200">
+                </a>
+            </div>
+            <div class="text">
+
+                <p class="title">卸妆啫喱</p>
+                <p class="price">
+                    <span class="pri">￥159</span>
+                </p>
+
+            </div>
+        </div></ul></td>
+        <td>
+            <ul>
+        <div class="item">
+            <div class="img">
+                <a href="/sephoraweb/beauty/1/goods/2/">
+                    <img src="../../../media/sephoraweb/卸妆液.jpg"alt="卸妆液" title="卸妆液" height="200" wide="200">
+                </a>
+            </div>
+            <div class="text">
+                <p class="title">卸妆液</p>
+                <p class="price">
+                    <span class="pri">￥89</span>
+                </p>
+
+            </div>
+        </div></ul>
+        </td>
+        <td>
+            <ul>
+        <div class="item">
+            <div class="img">
+                <a href="/sephoraweb/beauty/1/goods/3/">
+                    <img src="../../../media/sephoraweb/卸妆乳.jpg"alt="卸妆乳" title="卸妆乳" height="200" wide="200">
+                </a>
+            </div>
+            <div class="text">
+                <p class="title">卸妆乳</p>
+                <p class="price">
+                    </p>
+                    <span class="pri">￥260</span>
+
+            </div>
+        </div></ul>
+        </td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+        <div class="item">
+            <div class="img">
+                <a href="/sephoraweb/beauty/1/goods/4/">
+                    <img src="../../../media/sephoraweb/卸妆油.jpg"alt="卸妆油" title="卸妆油" height="200" wide="200">
+                </a>
+            </div>
+            <div class="text">
+                <p class="title">卸妆油</p>
+                <p class="price">
+                    <span class="pri">￥890</span>
+                </p>
+
+            </div>
+        </div></ul></td>
+            <td>
+                <ul>
+        <div class="item">
+            <div class="img">
+                <a href="/sephoraweb/beauty/1/goods/5/">
+                    <img src="../../../media/sephoraweb/卸妆巾.jpg"alt="卸妆巾" title="卸妆巾" height="200" wide="200">
+                </a>
+            </div>
+            <div class="text">
+                <p class="title">卸妆巾</p>
+                <p class="price">
+                    <span class="pri">￥59</span>
+                </p>
+
+            </div>
+        </div></ul></td>
+            <td>
+                <ul>
+        <div class="item">
+            <div class="img">
+                <a href="/sephoraweb/beauty/1/goods/6/">
+                    <img src="../../../media/sephoraweb/卸妆套装.jpg"alt="卸妆套装" title="卸妆套装" height="200" wide="200">
+                </a>
+            </div>
+            <div class="text">
+                <p class="title">卸妆套装</p>
+                <p class="price">
+                    <span class="pri">￥890</span>
+                </p>
+
+            </div>
+        </div></ul></td></tr></table>
+        <table border="1" width="1100" cellpadding="0" cellspacing="0" bordercolor="white">
+        <tr><div class="font2"><h3 align="center">面部护理</h3></div>
+            <td>
+            <ul>
+        <div class="item">
+            <div class="img">
+                <a href="/sephoraweb/beauty/1/goods/7/">
+                    <img src="../../../media/sephoraweb/化妆水.jpg"alt="化妆水" title="化妆水" height="200" wide="200">
+                </a>
+            </div>
+            <div class="text">
+                <p class="title">化妆水</p>
+                <p class="price">
+                    <span class="pri">￥580</span>
+                </p>
+            </div>
+        </div></ul></td>
+            <td>
+                <ul>
+        <div class="item">
+            <div class="img">
+                <a href="/sephoraweb/beauty/1/goods/8/">
+                    <img src="../../../media/sephoraweb/面部精华.jpg"alt="面部精华" title="面部精华" height="200" wide="200">
+                </a>
+            </div>
+            <div class="text">
+                <p class="title">面部精华</p>
+                <p class="price">
+                    <span class="pri">￥770</span>
+                </p>
+            </div>
+        </div></ul></td>
+            <td>
+                <ul>
+        <div class="item">
+            <div class="img">
+                <a href="/sephoraweb/beauty/1/goods/9/">
+                    <img src="../../../media/sephoraweb/面霜.jpg"alt="面霜" title="面霜" height="200" wide="200">
+                </a>
+            </div>
+            <div class="text">
+                <p class="title">面霜</p>
+                <p class="price">
+                    <span class="pri">￥180</span>
+                </p>
+            </div>
+        </div></ul>
+            </td>
+        </tr></table>
+        <table border="1" width="1100" cellpadding="0" cellspacing="0" bordercolor="white">
+        <tr>
+            <div class="font1"><h2>彩妆</h2></div>
+        <div class="font2"><h3 align="center">脸部彩妆</h3></div>
+        <tr>
+            <td>
+                <ul>
+                <div class="item">
+                <div class="img">
+                <a href="/sephoraweb/beauty/2/goods/13/">
+                    <img src="../../../media/sephoraweb/妆前乳.jpg"alt="妆前乳" title="妆前乳" height="200" wide="200">
+                </a><div class="text">
+                <p class="title">妆前乳</p>
+                <p class="price">
+                    <span class="pri">￥560</span>
+
+                </p></div></div></div>
+                </ul>
+            </td>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/2/goods/14/">
+                        <img src="../../../media/sephoraweb/遮瑕.jpg"alt="遮瑕" title="遮瑕" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">遮瑕</p>
+                    <p class="price">
+                        <span class="pri">￥280</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/2/goods/15/">
+                        <img src="../../../media/sephoraweb/粉饼.jpg"alt="粉饼" title="粉饼" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">粉饼</p>
+                    <p class="price">
+                        <span class="pri">￥149</span>
+                    </p></div></div></div>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/2/goods/16/">
+                        <img src="../../../media/sephoraweb/腮红.jpg"alt="腮红" title="腮红" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">腮红</p>
+                    <p class="price">
+                        <span class="pri">￥130</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/2/goods/17/">
+                        <img src="../../../media/sephoraweb/高光.jpg"alt="高光" title="高光" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">高光</p>
+                    <p class="price">
+                        <span class="pri">￥480</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/2/goods/18/">
+                        <img src="../../../media/sephoraweb/散粉.jpg"alt="散粉" title="散粉" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">散粉</p>
+                    <p class="price">
+                        <span class="pri">￥550</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+        </tr></table>
+        <table border="1" width="1100" cellpadding="0" cellspacing="0" bordercolor="white">
+        <tr>
+        <div class="font2"><h3 align="center">唇部彩妆</h3></div>
+        <tr>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/2/goods/19/">
+                        <img src="../../../media/sephoraweb/润唇膏.jpg"alt="润唇膏" title="润唇膏" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">润唇膏</p>
+                    <p class="price">
+                        <span class="pri">￥310</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/2/goods/20/">
+                        <img src="../../../media/sephoraweb/唇釉.jpg"alt="唇釉" title="唇釉" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">唇釉</p>
+                    <p class="price">
+                        <span class="pri">￥310</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/2/goods/21/">
+                        <img src="../../../media/sephoraweb/唇线笔.jpg"alt="唇线笔" title="唇线笔" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">唇线笔</p>
+                    <p class="price">
+                        <span class="pri">￥85</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+        </tr>
+        </table>
+        <table border="1" width="1100" cellpadding="0" cellspacing="0" bordercolor="white">
+        <tr>
+            <div class="font1"><h2>香水</h2></div>
+        <div class="font2"><h3 align="center">女士</h3></div>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/3/goods/22/">
+                        <img src="../../../media/sephoraweb/迪奥小姐花漾.jpg"alt="迪奥小姐花漾" title="迪奥小姐花漾" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">迪奥小姐花漾</p>
+                    <p class="price">
+                        <span class="pri">￥1195</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/3/goods/23/">
+                        <img src="../../../media/sephoraweb/chloe恋旅女士香氛.jpg"alt="浓香" title="浓香" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">chloe恋旅女士香氛</p>
+                    <p class="price">
+                        <span class="pri">￥880</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/3/goods/24/">
+                        <img src="../../../media/sephoraweb/香体乳.jpg"alt="香体乳" title="香体乳" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">香体乳</p>
+                    <p class="price">
+                        <span class="pri">￥830</span>
+                    </p></div></div></div>
+                </ul>
+            </td>
+        </tr></table>
+        <table border="1" width="1100" cellpadding="0" cellspacing="0" bordercolor="white">
+        <tr>
+        <div class="font2"><h3 align="center">男士</h3></div>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/3/goods/25/">
+                        <img src="../../../media/sephoraweb/淡香男.jpg"alt="淡香" title="淡香" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">普拉达绅士淡香水</p>
+                    <p class="price">
+                        <span class="pri">￥690</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/3/goods/26/">
+                        <img src="../../../media/sephoraweb/古龙水.jpg"alt="古龙水" title="古龙水" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">帕尔玛之水克罗尼亚绅士古龙水</p>
+                    <p class="price">
+                        <span class="pri">￥1150</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/3/goods/27/">
+                        <img src="../../../media/sephoraweb/礼盒套装.jpg"alt="礼盒套装" title="礼盒套装" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">礼盒套装</p>
+                    <p class="price">
+                        <span class="pri">￥680</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+        </tr></table>
+        <table border="1" width="1100" cellpadding="0" cellspacing="0" bordercolor="white">
+        <tr>
+        <div class="font2"><h3 align="center">中性</h3></div>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/3/goods/28/">
+                        <img src="../../../media/sephoraweb/淡香中性.jpg"alt="淡香" title="淡香" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">帕尔玛之水蓝色地中海加州桂淡香水</p>
+                    <p class="price">
+                        <span class="pri">￥870</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/3/goods/29/">
+                        <img src="../../../media/sephoraweb/香体油.jpg"alt="香体油" title="香体油" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">香体油</p>
+                    <p class="price">
+                        <span class="pri">￥720</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/3/goods/30/">
+                        <img src="../../../media/sephoraweb/香氛蜡烛.jpg"alt="香氛蜡烛" title="香氛蜡烛" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">香氛蜡烛</p>
+                    <p class="price">
+                        <span class="pri">￥480</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+        </tr></table>
+        <table border="1" width="1100" cellpadding="0" cellspacing="0" bordercolor="white">
+        <tr>
+            <div class="font1"><h2>工具</h2></div>
+        <div class="font2"><h3 align="center">美容仪</h3></div>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/4/goods/31/">
+                        <img src="../../../media/sephoraweb/仪配件.jpg"alt="仪配件" title="仪配件" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">仪配件</p>
+                    <p class="price">
+                        <span class="pri">￥230</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/4/goods/32/">
+                        <img src="../../../media/sephoraweb/美容仪.jpg"alt="美容仪" title="美容仪" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">美容仪</p>
+                    <p class="price">
+                        <span class="pri">￥399</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/4/goods/33/">
+                        <img src="../../../media/sephoraweb/美容套装.jpg"alt="美容套装" title="美容套装" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">美容套装</p>
+                    <p class="price">
+                        <span class="pri">￥2099</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+        </tr></table>
+        <table border="1" width="1100" cellpadding="0" cellspacing="0" bordercolor="white">
+        <tr>
+        <div class="font2"><h3 align="center">化妆工具</h3></div>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/4/goods/34/">
+                        <img src="../../../media/sephoraweb/散粉刷.jpg"alt="散粉刷" title="散粉刷" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">散粉刷</p>
+                    <p class="price">
+                        <span class="pri">￥119</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/4/goods/35/">
+                        <img src="../../../media/sephoraweb/眼影刷.jpg"alt="眼影刷" title="眼影刷" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">眼影刷</p>
+                    <p class="price">
+                        <span class="pri">￥79</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/4/goods/36/">
+                        <img src="../../../media/sephoraweb/粉扑.jpg"alt="粉扑" title="粉扑" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">粉扑</p>
+                    <p class="price">
+                        <span class="pri">￥99</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+        </tr></table>
+        <table border="1" width="1100" cellpadding="0" cellspacing="0" bordercolor="white">
+        <tr>
+        <div class="font2"><h3 align="center">护肤工具</h3></div>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/4/goods/37/">
+                        <img src="../../../media/sephoraweb/去痘棒.jpg"alt="去痘棒" title="去痘棒" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">去痘棒</p>
+                    <p class="price">
+                        <span class="pri">￥29</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/4/goods/38/">
+                        <img src="../../../media/sephoraweb/化妆棉.jpg"alt="化妆棉" title="化妆棉" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">化妆棉</p>
+                    <p class="price">
+                        <span class="pri">￥39</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+            <td>
+                <ul><div class="item">
+                    <div class="img">
+                    <a href="/sephoraweb/beauty/4/goods/39/">
+                        <img src="../../../media/sephoraweb/痘贴.jpg"alt="痘贴" title="痘贴" height="200" wide="200">
+                    </a><div class="text">
+                    <p class="title">痘贴</p>
+                    <p class="price">
+                        <span class="pri">￥49</span>
+
+                    </p></div></div></div>
+                </ul>
+            </td>
+        </tr></table>
+        </div>
+        </div>
+        </div>
+    <tr><td height="50"></td></tr>
+    </table>
+        <div class="word">
+            <p>沪公网安备 31010602003121号  ICP备案序号:沪ICP备05026645号  食品经营许可证  网站使用条款  严正声明</p>
+            <p>本网站隶属于丝芙兰（上海）化妆品销售有限公司（企业法人营业执照）  预付卡信息对接唯一标识 : 310101F5201530100309</p>
+        </div>
+
+{% endblock %}
+</body>
+</html>
+
+
+

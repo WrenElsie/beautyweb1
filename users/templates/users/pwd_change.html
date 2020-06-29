@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+    <style type="text/css">
+        #border{
+            border: 1px solid seashell;
+            padding: 15px;
+            width-left-: 100px;
+            border-right-width:400px;
+            border-left-width: 400px;
+            text-align: center;
+        }
+        #center{
+           text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h2 id="center" >修改密码</h2>
+<ul id="border">
+{% if message %}
+ {{ message }}
+{% endif %}
+<div>
+   <form method="post" action="" enctype="multipart/form-data">
+      {% csrf_token %}
+      {% for field in form %}
+           <div>
+        {{ field.errors }}
+        {{ field.label_tag }} {{ field }}
+        {% if field.help_text %}
+             <p >{{ field.help_text|safe }}</p>
+        {% endif %}
+           </div>
+        {% endfor %}
+      <div >
+         <input type="submit" value="提交" />
+      </div>
+   </form>
+</div>
+</ul>
+<ul id="border">
+    <p>
+        <a href="/accounts/logout/">退出</a>
+    </p>
+</ul>
+
+</body>
+</html>
+

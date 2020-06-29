@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+       #para1{
+            color:darkred;
+            font-size: 25px;
+        }
+       .font{
+            color:goldenrod;
+            font-weight: bolder;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    {% extends "sephoraweb/base.html" %}
+    {% block content %}
+        <table border="1" bordercolor="white">
+            <tr align="center">
+                <td  colspan="2"><h3>
+                 {{good.name }}
+                    {% if request.user == dish.user %}
+                    <a href="{% url 'sephoraweb:good_edit' good.beauty.id good.id %}">修改</a>
+                    {% endif %}
+                </h3></td>
+             </tr>
+            <tr >
+                <td>    {% if good.image %}
+                        <p><img src="{{ good.image.url }}"/></p>
+                {% endif %}</td>
+                <td><ul>
+                    <li><p id="para1">￥ {{ good.price }} </p></li>
+                     <li><p class="font  color">商品介绍：{{ good.description}}</p></li>
+                     <li>活动：领5元红包，立即抵扣</li>
+                     <li>保障：假一赔四.过敏包退.退货运费险.极速退款</li>
+                     <li><p class="font "> <a href="{% url 'sephoraweb:beauty_detail' good.beauty.id %}">
+                        返回浏览界面</a></p></li>
+                </ul></td>
+            </tr>
+            <tr height="150" align="center" valign="middle"></tr>
+
+    </table>
+
+        <div class="word" align="center" valign="middle">
+            <p>沪公网安备 31010602003121号  ICP备案序号:沪ICP备05026645号  食品经营许可证  网站使用条款  严正声明</p>
+            <p>本网站隶属于丝芙兰（上海）化妆品销售有限公司（企业法人营业执照）  预付卡信息对接唯一标识 : 310101F5201530100309</p>
+        </div>
+    {% endblock %}
+
+</body>
+</html>
+
